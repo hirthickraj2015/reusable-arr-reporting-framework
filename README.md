@@ -187,8 +187,9 @@ python main.py
 
 ---
 
-## 🎉 Getting Help / Contact
+## 🎉 Tips
 
 * Check logs first
 * Run data_pre_checks
 * Test small datasets for bucket logic
+
