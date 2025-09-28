@@ -7,7 +7,7 @@
 
 ## 🔍 What is this?
 
-A PySpark-based framework for **fast**, **reusable**, and **configurable** ARR bucket creation and reporting tasks.
+A Python-based framework for **fast**, **reusable**, and **configurable** ARR bucket creation and reporting tasks.
 
 ARR = *Annual Recurring Revenue*. In many subscription / SaaS businesses, it’s critical to segment customers (or revenue) into buckets (e.g. <$10k, $10-50k, >$50k), compute growth, detect churn, etc.
 
@@ -192,4 +192,5 @@ python main.py
 * Check logs first
 * Run data_pre_checks
 * Test small datasets for bucket logic
+
 
