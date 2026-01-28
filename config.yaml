@@ -6,9 +6,9 @@
     # If you are having trouble loading data, please try changing your dir using the "os.chdir()" command
 file_locations:
 
-    path_in: '\sog-revenue-bridge-2\data\annual_norway_customers_arr_input_aug25.csv'
-    waterfall_path_out: '\sog-revenue-bridge-2\data\outputs\LM August 25 Norway Item Snowball waterfall output.csv'
-    flat_path_out: '\sog-revenue-bridge-2\data\outputs\LM August 25 Norway Item Snowball flat output.csv'
+    path_in: '/reusable-arr-reporting-framework/data/sample_input.csv'
+    waterfall_path_out: '/reusable-arr-reporting-framework/data/outputs/waterfall_output.csv'
+    flat_path_out: '/reusable-arr-reporting-framework/data/outputs/flat_output.csv'
 
 ## Define all constants that will be used throughout the script
 # If you want to do a classic Snowball, looking across a static time period of x months, choose 'number_of_months'
@@ -31,16 +31,17 @@ constants:
     # In order for the script to work, we need consistently named columns, and we set to a standard template here
 column_headers:
     # Please change the FIRST value of the dictionary pair to be the name of your input column
+    # Format: input_column_name: 'standard_column_name'
     initial_mapping:
         customer_id: 'customer_id'
         customer_name: 'customer_name'
         product_id: 'product_id'
         product_name: 'product_name'
-        product_family: 'product_sub-family'
-        product_group: 'product_family'
+        product_sub-family: 'product_family'
+        product_family: 'product_group'
         month: 'month'
         arr: 'arr'
-        revenue_type: 'is_recurring'
+        is_recurring: 'is_recurring'
         currency: 'currency'
 
     # Set required columns without which the Snowball will not work. This should not require many changes
@@ -57,7 +58,7 @@ column_headers:
     - 'customer_id'
     - 'customer_name'
     - 'product_family'
-    - 'product_sub-family'
+    - 'product_group'
     - 'product_id'
     - 'product_name'
     - 'is_recurring'
